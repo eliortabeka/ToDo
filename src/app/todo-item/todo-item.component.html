@@ -1,0 +1,7 @@
+<div class="list-item" [class.completed]="item.completed">
+  <div>
+    <input [id]="item.id" type="checkbox" (change)="toggleStatus()" [checked]="item.completed">
+    <label [for]="item.id">{{ item.title }}</label>
+  </div>
+  <button (click)="removeItem()" type="button">X</button>
+</div>

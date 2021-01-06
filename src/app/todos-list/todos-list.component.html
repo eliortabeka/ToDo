@@ -1,0 +1,16 @@
+
+<!--{{ items.length }}-->
+
+<ul *ngIf="items.length > 0; else noItemsMessage">
+  <li *ngFor="let item of items.reverse(); let i = index;">
+<!--    {{ i }}-->
+    <app-todo-item [item]="item"></app-todo-item>
+  </li>
+</ul>
+
+<ng-template #noItemsMessage>
+  <p>
+    Add your first task now.
+  </p>
+</ng-template>
+

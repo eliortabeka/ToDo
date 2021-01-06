@@ -1,0 +1,16 @@
+html,body {
+  height: calc(100% - 50px);
+}
+
+body {
+  font-size: 20px;
+  padding: 50px;
+}
+
+body, button, input {
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  border: 2px solid green;
+}

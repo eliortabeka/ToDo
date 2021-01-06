@@ -1,0 +1,8 @@
+<form (ngSubmit)="addNew()" [formGroup]="addTodoForm">
+  <input type="text"
+         [class.error]="title.errors && title.touched"
+         formControlName="title">
+  <button type="submit">Add new</button>
+</form>
+<p class="error-text" *ngIf="title.errors && title.errors.maxlength">10 Char Max!</p>
+<p class="error-text" *ngIf="title.touched && title.errors && title.errors.required">This field is mandatory!</p>
